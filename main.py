@@ -31,7 +31,6 @@ def check_if_correct(given_hash, nonce_val, result, username_val):
         pass
     else:
         print(r.text)
-        #print("Wrong hash", 402)
 
 def miner():
     print("Starting miner", threading.get_ident())

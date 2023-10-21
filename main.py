@@ -55,5 +55,5 @@ def ensurer():
 
 Thread(target=ensurer).start()
 
-for _ in range(50):
+for _ in range(10):
     Thread(target=miner).start()

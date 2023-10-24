@@ -26,6 +26,7 @@ def check_if_correct(given_hash, nonce_val, result, username_val):
     r = session.post(url, json={"Hash": given_hash, "Nonce": str(nonce_val), "Username": username_val, "Outcome": result, "Method": "FoundHash"})
     if r.text == "100":
         print(f"[{time.time()}] - Solved. New balance: ", get_balance())
+        get_new_hash(given_hash)
         return "success"
     elif r.text == "402":
         pass
